@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Snake Game</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #0b1220;
+  color: white;
+  text-align: center;
+}
+
+.wrapper {
+  margin-top: 20px;
+}
+
+.game-details {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  margin: auto;
+  background: #1e293b;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.play-board {
+  width: 300px;
+  height: 300px;
+  margin: 10px auto;
+  background: #1e293b;
+  display: grid;
+  grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+}
+
+.food {
+  background: red;
+}
+
+.head {
+  background: lime;
+}
+
+.body {
+  background: green;
+}
+
+/* 🎮 Controls */
+.controls {
+  position: fixed;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.up {
+  margin-bottom: 10px;
+}
+
+.bottom-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.controls button {
+  width: 70px;
+  height: 70px;
+  font-size: 22px;
+  border-radius: 12px;
+  background: #00ff88;
+  box-shadow: 0 0 15px #00ff88;
+  border: none;
+}
+
+/* Footer */
+.footer {
+  margin-top: 10px;
+  color: #00ff88;
+  font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+  <div class="game-details">
+    <span class="score">Score: 0</span>
+    <span class="highscore">High Score: 0</span>
+  </div>
+
+  <div class="play-board"></div>
+
+  <div class="footer">Developer by Ibrahim 🟢🔥</div>
+</div>
+
+<!-- 🎮 Controls -->
+<div class="controls">
+  <div class="up">
+    <button onclick="Snake.action('up')">⬆️</button>
+  </div>
+
+  <div class="bottom-row">
+    <button onclick="Snake.action('left')">⬅️</button>
+    <button onclick="Snake.action('down')">⬇️</button>
+    <button onclick="Snake.action('right')">➡️</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

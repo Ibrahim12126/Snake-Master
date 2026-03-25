@@ -1,0 +1,86 @@
+body {
+  background: #0b0f1a;
+  color: white;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.wrapper {
+  width: 320px;
+  margin: auto;
+}
+
+.play-board {
+  width: 300px;
+  height: 300px;
+  background: #1f2937;
+  display: grid;
+  grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+}
+
+.food {
+  background: red;
+}
+
+.head {
+  background: lime;
+}
+
+.body {
+  background: #00cc66;
+}
+
+.game-details {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background: #1f2937;
+}
+
+/* 🎮 Controls bottom */
+.controls {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.controls button {
+  font-size: 20px;
+  padding: 12px 18px;
+  margin: 5px;
+  border-radius: 10px;
+  background: #00ff88;
+  box-shadow: 0 0 10px #00ff88;
+}
+
+/* Modal */
+.game-over-modal,
+.difficulty-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,0.7);
+}
+
+.game-over-content,
+.difficulty-content {
+  background: #1f2937;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Footer glow */
+.footer {
+  margin-top: 20px;
+  text-align: center;
+  font-weight: bold;
+  background: linear-gradient(90deg,#00ffcc,#00ff00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
